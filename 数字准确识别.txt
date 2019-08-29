@@ -1,0 +1,10 @@
+import pytesseract
+from PIL import Image
+image=Image.open(r'C:\Users\Owner\PycharmProjects\untitled\4.jpg')
+image.show()
+image1=Image.open('5.jpg')
+#image1.show()
+text = pytesseract.image_to_string(image, lang='eng')
+text1 = pytesseract.image_to_string(image1, lang='eng')
+print(text)
+#print(text1)

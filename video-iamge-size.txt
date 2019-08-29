@@ -1,0 +1,22 @@
+import cv2
+video_filename = '/Users/Owner/PycharmProjects/untitled/12345.mp4'
+videoCap = cv2.VideoCapture(video_filename)
+# Ö¡Æµ
+fps = videoCap.get(cv2.CAP_PROP_FPS)
+# ÊÓÆµ×ÜÖ¡Êý
+total_frames = int(videoCap.get(cv2.CAP_PROP_FRAME_COUNT))
+# Í¼Ïñ³ß´ç
+image_size = (int(videoCap.get(cv2.CAP_PROP_FRAME_HEIGHT)), int(videoCap.get(cv2.CAP_PROP_FRAME_WIDTH)))
+print(fps)
+print(total_frames)
+print(image_size)
+for i in range(30):
+ ret, frame = videoCap.read()
+from PIL import Image
+#img = Image.fromarray(frame)
+#img.show()
+im = frame[:, :, 0]
+im = im[650:720,180 :215]
+im= Image.fromarray(im)
+im.show()
+im.save(r"C:\Users\Owner\PycharmProjects\untitled\a.jpg")

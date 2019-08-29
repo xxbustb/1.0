@@ -1,0 +1,8 @@
+import cv2
+#img=cv2.imread("E:\\1.JPG")
+#x, y = img.shape[0:2]
+#img_test1 = cv2.resize(img, (int(y / 2), int(x / 2)))
+#cv2.namedWindow("image")
+#cv2.imshow("image",img_test1)
+#cv2.waitKey()
+#cv2.destroyALLwindow(0)
